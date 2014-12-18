@@ -6,9 +6,10 @@
 	<meta name="viewport" content="width=1200">
 	<link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
 	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
-	<link href="./fancybox/style.css" rel="stylesheet" type="text/css" title="compact">
 	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/hoverdiv.js"></script>
 	<script type="text/javascript" src="./js/masonry.js"></script>
+	<script type="text/javascript" src="./js/modernizr.js"></script>
 	<script type="text/javascript" src="./js/selectbox.js"></script>
 	<script type="text/javascript" src="./js/slides.js"></script>
 	<script type="text/javascript" src="./js/dynamic.js"></script>
@@ -33,88 +34,139 @@
 		<div class="content">
 			<div>
 				<ul class="nav">
-					<li class="active"><a href="#"><span>Компания</span></a></li>
+					<li><a href="#"><span>Компания</span></a></li>
 					<li><a href="#"><span>История</span></a></li>
 					<li><a href="#"><span>Достижения</span></a></li>
-					<li><a href="#"><span>Наша команда</span></a></li>
+					<li class="active"><a href="#"><span>Наша команда</span></a></li>
 					<li><a href="#"><span>Вакансии</span></a></li>
 				</ul>
-				<div class="team">
-					<ul class="pl">
-						<li><img src="./pic/team2.jpg" width="450" height="234" alt=""></li>
-						<li><img src="./pic/team3.jpg" width="450" height="234" alt=""></li>
-					</ul>
-					<div class="main">
-						<img src="./pic/team1.jpg" width="960" height="488" alt="">
+			</div>
+			<div class="team">
+				<div class="pl">
+					<div class="container"></div>
+					<div class="temp">
 						<div>
-							<h2>Наша команда</h2>
+							<div class="double">
+								<img src="./pic/team2.jpg" width="450" height="234" alt="">
+							</div>
+							<div class="double">
+								<img src="./pic/team3.jpg" width="450" height="234" alt="">
+							</div>
+						</div>
+						<div>
+							<div class="double">
+								<img src="./pic/team2.jpg" width="450" height="234" alt="">
+							</div>
+							<div class="double">
+								<img src="./pic/team3.jpg" width="450" height="234" alt="">
+							</div>
 						</div>
 					</div>
-					<div class="pr">
-						<img src="./pic/team4.jpg" width="450" height="488" alt="">
+				</div>
+				<div class="main">
+					<img src="./pic/team1.jpg" width="960" height="488" alt="">
+					<div>
+						<h2>Наша команда</h2>
 					</div>
 				</div>
+				<div class="pr">
+					<div class="container"></div>
+					<div class="temp">
+						<div>
+							<div class="single">
+								<img src="./pic/team4.jpg" width="450" height="488" alt="">
+							</div>
+						</div>
+						<div>
+							<div class="single">
+								<img src="./pic/team4.jpg" width="450" height="488" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div>
 				<h1>Отделы</h1>
 				<ul class="departments">
 					<li>
-						<div>
-							<img src="./img/department1_icon.png" width="71" height="68" alt="">
-						</div>
-						<p>Административно- управленческий отдел</p>
+						<a href="#">
+							<div>
+								<img src="./img/department1_icon.png" width="71" height="68" alt="">
+							</div>
+							<p>Административно- управленческий отдел</p>
+						</a>
 					</li>
 					<li>
-						<div>
-							<img src="./img/department2_icon.png" width="67" height="68" alt="">
-						</div>
-						<p>Архитектурный<br> отдел</p>
+						<a href="#">
+							<div>
+								<img src="./img/department2_icon.png" width="67" height="68" alt="">
+							</div>
+							<p>Архитектурный<br> отдел</p>
+						</a>
 					</li>
 					<li>
-						<div>
-							<img src="./img/department3_icon.png" width="71" height="68" alt="">
-						</div>
-						<p>Строительный<br> отдел</p>
+						<a href="#">
+							<div>
+								<img src="./img/department3_icon.png" width="71" height="68" alt="">
+							</div>
+							<p>Строительный<br> отдел</p>
+						</a>
 					</li>
 					<li>
-						<div>
-							<img src="./img/department4_icon.png" width="52" height="69" alt="">
-						</div>
-						<p>Сантехнический отдел</p>
+						<a href="#">
+							<div>
+								<img src="./img/department4_icon.png" width="52" height="69" alt="">
+							</div>
+							<p>Сантехнический отдел</p>
+						</a>
 					</li>
 					<li>
-						<div>
-							<img src="./img/department5_icon.png" width="75" height="68" alt="">
-						</div>
-						<p>Отдел<br> генеральных<br> планов</p>
+						<a href="#">
+							<div>
+								<img src="./img/department5_icon.png" width="75" height="68" alt="">
+							</div>
+							<p>Отдел<br> генеральных<br> планов</p>
+						</a>
 					</li>
 					<li>
-						<div>
-							<img src="./img/department6_icon.png" width="70" height="69" alt="">
-						</div>
-						<p>Технологический отдел</p>
+						<a href="#">
+							<div>
+								<img src="./img/department6_icon.png" width="70" height="69" alt="">
+							</div>
+							<p>Технологический отдел</p>
+						</a>
 					</li>
 					<li>
-						<div>
-							<img src="./img/department7_icon.png" width="78" height="69" alt="">
-						</div>
-						<p>Электротехнический отдел</p>
+						<a href="#">
+							<div>
+								<img src="./img/department7_icon.png" width="78" height="69" alt="">
+							</div>
+							<p>Электротехнический отдел</p>
+						</a>
 					</li>
 					<li>
-						<div>
-							<img src="./img/department8_icon.png" width="48" height="66" alt="">
-						</div>
-						<p>Сметный<br> отдел</p>
+						<a href="#">
+							<div>
+								<img src="./img/department8_icon.png" width="48" height="66" alt="">
+							</div>
+							<p>Сметный<br> отдел</p>
+						</a>
 					</li>
 					<li>
-						<div>
-							<img src="./img/department9_icon.png" width="95" height="66" alt="">
-						</div>
-						<p>Отдел<br> сапр</p>
+						<a href="#">
+							<div>
+								<img src="./img/department9_icon.png" width="95" height="66" alt="">
+							</div>
+							<p>Отдел<br> сапр</p>
+						</a>
 					</li>
 					<li>
-						<div>
-							<img src="./img/department10_icon.png" width="66" height="69" alt="">
-						</div>
-						<p>Отдел<br> оформления и выпуска проектов</p>
+						<a href="#">
+							<div>
+								<img src="./img/department10_icon.png" width="66" height="69" alt="">
+							</div>
+							<p>Отдел<br> оформления и выпуска проектов</p>
+						</a>
 					</li>
 				</ul>
 			</div>

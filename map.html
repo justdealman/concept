@@ -6,9 +6,10 @@
 	<meta name="viewport" content="width=1200">
 	<link href="./favicon.ico" rel="shortcut icon" type="image/x-icon">
 	<link href="./css/style.css" rel="stylesheet" type="text/css" title="compact">
-	<link href="./fancybox/style.css" rel="stylesheet" type="text/css" title="compact">
 	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/hoverdiv.js"></script>
 	<script type="text/javascript" src="./js/masonry.js"></script>
+	<script type="text/javascript" src="./js/modernizr.js"></script>
 	<script type="text/javascript" src="./js/selectbox.js"></script>
 	<script type="text/javascript" src="./js/slides.js"></script>
 	<script type="text/javascript" src="./js/dynamic.js"></script>
@@ -33,8 +34,8 @@
 		<div class="content">
 			<div>
 				<ul class="nav">
-					<li class="active"><a href="#"><span>Проекты по назначению</span></a></li>
-					<li><a href="#"><span>География проектов</span></a></li>
+					<li><a href="#"><span>Проекты по назначению</span></a></li>
+					<li class="active"><a href="#"><span>География проектов</span></a></li>
 				</ul>
 			</div>
 			<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
@@ -45,38 +46,61 @@
 						center: [53.34976885, 83.71915357],
 						zoom: 13
 					}); 
-					var building1 = new ymaps.Placemark([53.34719308, 83.70417602], {}, {
+					var building1 = new ymaps.Placemark([53.34719308, 83.70417602], {
+						balloonContentHeader: '<img src="./pic/mapbuilding1.jpg" width="180" height="122" alt="">',
+						balloonContentBody: '<h3>Салатовый <span>жилой комплекс</h3><h6>2008</h6>',
+					}, {
 						iconLayout: 'default#image',
 						iconImageHref: './img/map_hint1.png',
 						iconImageSize: [64, 77],
-						iconImageOffset: [-31, -74]
+						iconImageOffset: [-31, -74],
+						hideIconOnBalloonOpen: false
 					});	
-					var building2 = new ymaps.Placemark([53.36393344, 83.69336136], {}, {
+					var building2 = new ymaps.Placemark([53.36393344, 83.69336136], {
+						balloonContentHeader: '<img src="./pic/mapbuilding1.jpg" width="180" height="122" alt="">',
+						balloonContentBody: '<h3>Желтый <span>жилой комплекс</h3><h6>2008</h6>',
+					}, {
 						iconLayout: 'default#image',
 						iconImageHref: './img/map_hint2.png',
 						iconImageSize: [64, 77],
-						iconImageOffset: [-31, -74]
+						iconImageOffset: [-31, -74],
+						hideIconOnBalloonOpen: false
 					});	
-					var building3 = new ymaps.Placemark([53.34474442, 83.68819384], {}, {
+					var building3 = new ymaps.Placemark([53.34474442, 83.68819384], {
+						balloonContentHeader: '<img src="./pic/mapbuilding1.jpg" width="180" height="122" alt="">',
+						balloonContentBody: '<h3>Зеленый <span>жилой комплекс</h3><h6>2008</h6>',
+					}, {
 						iconLayout: 'default#image',
 						iconImageHref: './img/map_hint3.png',
 						iconImageSize: [64, 77],
-						iconImageOffset: [-31, -74]
+						iconImageOffset: [-31, -74],
+						hideIconOnBalloonOpen: false
 					});	
-					var building4 = new ymaps.Placemark([53.35923341, 83.74387316], {}, {
+					var building4 = new ymaps.Placemark([53.35923341, 83.74387316], {
+						balloonContentHeader: '<img src="./pic/mapbuilding1.jpg" width="180" height="122" alt="">',
+						balloonContentBody: '<h3>Оранжевый <span>жилой комплекс</h3><h6>2008</h6>',
+					}, {
 						iconLayout: 'default#image',
 						iconImageHref: './img/map_hint4.png',
 						iconImageSize: [64, 77],
-						iconImageOffset: [-31, -74]
+						iconImageOffset: [-31, -74],
+						hideIconOnBalloonOpen: false
 					});	
-					var building5 = new ymaps.Placemark([53.33739451, 83.73270695], {}, {
+					var building5 = new ymaps.Placemark([53.33739451, 83.73270695], {
+						balloonContentHeader: '<img src="./pic/mapbuilding1.jpg" width="180" height="122" alt="">',
+						balloonContentBody: '<h3>Голубой <span>жилой комплекс</h3><h6>2008</h6>',
+					}, {
 						iconLayout: 'default#image',
 						iconImageHref: './img/map_hint5.png',
 						iconImageSize: [64, 77],
-						iconImageOffset: [-31, -74]
+						iconImageOffset: [-31, -74],
+						hideIconOnBalloonOpen: false
 					});	
 					barnaul.geoObjects.add(building1).add(building2).add(building3).add(building4).add(building5);
 					barnaul.controls.remove('fullscreenControl').remove('geolocationControl').remove('searchControl').remove('trafficControl').remove('typeSelector').remove('zoomControl');
+					barnaul.events.add('click', function(e) {
+						barnaul.balloon.close();
+					});
 				}
 			</script>
 			<div id="map"></div>
