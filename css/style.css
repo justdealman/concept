@@ -1049,8 +1049,9 @@ button::-moz-focus-inner {
 	width:390px;
 }
 .portfolio .information h1 {
-	line-height:48px;
-	margin:0 0 44px 6px;
+	font-size:36px;
+	line-height:42px;
+	margin:0 0 34px 6px;
 }
 .portfolio .information p {
 	font-size:18px;
@@ -1143,16 +1144,25 @@ button::-moz-focus-inner {
 	min-height:254px;
 }
 
-@media screen and (max-width: 1400px) {
+
+@media screen and (max-width: 1600px) {
 	.portfolio .information h1 {
 		font-size:32px;
 		line-height:36px;
 		margin:0 0 24px 6px;
 	}
+}
+
+@media screen and (max-width: 1400px) {
+	.portfolio .information h1 {
+		font-size:26px;
+		line-height:30px;
+		margin:0 0 24px 6px;
+	}
 	.portfolio .information p {
-		font-size:16px;
-		line-height:20px;
-		margin:0 0 12px 6px;
+		font-size:15px;
+		line-height:18px;
+		margin:0 0 10px 6px;
 	}
 	.portfolio .information p span {
 		font-size:13px;
@@ -1160,19 +1170,19 @@ button::-moz-focus-inner {
 		margin:0 0 2px;
 	}
 	.portfolio .information p strong {
-		font-size:20px;
-		line-height:24px;
+		font-size:18px;
+		line-height:22px;
 	}
 }
 @media screen and (max-width: 1200px) {
 	.portfolio .information h1 {
-		font-size:28px;
-		line-height:32px;
-		margin:0 0 16px 6px;
+		font-size:22px;
+		line-height:26px;
+		margin:0 0 18px 6px;
 	}
 	.portfolio .information p {
-		font-size:15px;
-		line-height:18px;
+		font-size:14px;
+		line-height:17px;
 		margin:0 0 10px 6px;
 	}
 	.portfolio .information p span {
@@ -1181,8 +1191,8 @@ button::-moz-focus-inner {
 		margin:0 0 1px;
 	}
 	.portfolio .information p strong {
-		font-size:18px;
-		line-height:22px;
+		font-size:16px;
+		line-height:20px;
 	}
 }
 
