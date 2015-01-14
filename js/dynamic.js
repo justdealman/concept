@@ -26,7 +26,125 @@ function team() {
 function portfolio() {
 	var animation = 1000;
 	var speed = 5000;
-	var pw=$(window).width();var pl=-(Math.ceil($(window).width()/20)*20-$(window).width())/2;if(pw>1720){var p1=960;var p2=280;var p3=380;var ph=802;if(ph>$(window).height()-($(".header").height()+$(".footer").height()+52)){ph=$(window).height()-($(".header").height()+$(".footer").height()+52)}var wt=95;var pl=0}else{var p1=Math.ceil(pw*960/1720/10)*10;var p2=Math.ceil(pw*280/1720/10)*10;var p3=Math.ceil(pw*380/1720/10)*10;var ph=pw*802/1720;if(ph>$(window).height()-($(".header").height()+$(".footer").height()+52)){ph=$(window).height()-($(".header").height()+$(".footer").height()+52)}var wt=ph*95/802}if(pw>1820){pl=(pw-1816)/2}$(".portfolio").css({height:ph+"px","margin-left":pl+"px"});$(".portfolio .main .container").empty();$(".portfolio .main .pagination, .portfolio .main .prev, .portfolio .main .next").remove();$(".portfolio .main .container").html($(".portfolio .main .temp").html());$(".portfolio .main").css({left:p3+40+"px"});$(".portfolio .main, .portfolio .main .container, .portfolio .main .container > div").css({width:p1+"px",height:ph+"px"});$(".portfolio .main, .portfolio .main .container, .portfolio .main .container > div").css({height:ph+"px"});$(".portfolio .information").css({top:wt+"px",left:"20px",width:p3+"px"});$(".portfolio .main .container > div").each(function(){$(this).css({background:'url("'+$(this).find("img").attr("src")+'") no-repeat center center',"-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover"})});$(".portfolio .main").slides({generatePagination:true,generateNextPrev:true,container:"container",effect:"slide",slideSpeed:animation,play:speed,pause:0});$(".portfolio .main .pagination").css({left:p1+20+"px",width:p2+"px"});$(".portfolio .main .pagination li, .portfolio .main .pagination li a").css({height:Math.ceil((ph-40)/3)+"px"});$(".portfolio .main .pagination li").each(function(){var e=$(this).index()+1;$(this).find("a").html($(".portfolio .main .temp > div:nth-child("+e+")").html())});$(".portfolio .main .pagination li").each(function(){$(this).css({background:'url("'+$(this).find("img").attr("src")+'") no-repeat center center',"-webkit-background-size":"cover","-moz-background-size":"cover","-o-background-size":"cover","background-size":"cover"})})
+	var pw = $(window).width();
+	var pl = -(Math.ceil($(window).width() / 20) * 20 - $(window).width()) / 2;
+	if (pw > 1720) {
+	    var p1 = 960;
+	    var p2 = 280;
+	    var p3 = 380;
+	    var ph = 802;
+	    if (ph > $(window).height() - ($(".header").height() + $(".footer").height() + 52)) {
+	        ph = $(window).height() - ($(".header").height() + $(".footer").height() + 52)
+	    }
+	    var wt = 95;
+	    var pl = 0
+	} else {
+	    var p1 = Math.ceil(pw * 960 / 1720 / 10) * 10;
+	    var p2 = Math.ceil(pw * 280 / 1720 / 10) * 10;
+	    var p3 = Math.ceil(pw * 380 / 1720 / 10) * 10;
+	    var ph = pw * 802 / 1720;
+	    if (ph > $(window).height() - ($(".header").height() + $(".footer").height() + 52)) {
+	        ph = $(window).height() - ($(".header").height() + $(".footer").height() + 52)
+	    }
+	    var wt = ph * 95 / 802
+	}
+	if (pw > 1820) {
+	    pl = (pw - 1816) / 2
+	}
+	$(".portfolio").css({
+	    height: ph + "px",
+	    "margin-left": pl + "px"
+	});
+	$(".portfolio .main .container").empty();
+	$(".portfolio .main .pagination, .portfolio .main .prev, .portfolio .main .next").remove();
+	$(".portfolio .main .container").html($(".portfolio .main .temp").html());
+	$(".portfolio .main").css({
+	    left: p3 + 40 + "px"
+	});
+	$(".portfolio .main, .portfolio .main .container, .portfolio .main .container > div").css({
+	    width: p1 + "px",
+	    height: ph + "px"
+	});
+	$(".portfolio .main, .portfolio .main .container, .portfolio .main .container > div").css({
+	    height: ph + "px"
+	});
+	$(".portfolio .information").css({
+	    top: wt + "px",
+	    left: "20px",
+	    width: p3 + "px"
+	});
+	$(".portfolio .main .container > div").each(function() {
+	    $(this).css({
+	        background: 'url("' + $(this).find("img").attr("src") + '") no-repeat center center',
+	        "-webkit-background-size": "cover",
+	        "-moz-background-size": "cover",
+	        "-o-background-size": "cover",
+	        "background-size": "cover"
+	    })
+	});
+	$(".portfolio .main").slides({
+	    generatePagination: true,
+	    generateNextPrev: true,
+	    container: "container",
+	    effect: "slide",
+	    slideSpeed: animation,
+	    play: speed,
+	    pause: 0
+	});
+	$(".portfolio .main .pagination").css({
+	    left: p1 + 20 + "px",
+	    width: p2 + "px"
+	});
+	$(".portfolio .main .pagination li, .portfolio .main .pagination li a").css({
+	    height: Math.ceil((ph - 40) / 3) + "px"
+	});
+	$(".portfolio .main .pagination li").each(function() {
+	    var e = $(this).index() + 1;
+	    $(this).find("a").html($(".portfolio .main .temp > div:nth-child(" + e + ")").html())
+	});
+	$(".portfolio .main .pagination li").each(function() {
+	    $(this).css({
+	        background: 'url("' + $(this).find("img").attr("src") + '") no-repeat center center',
+	        "-webkit-background-size": "cover",
+	        "-moz-background-size": "cover",
+	        "-o-background-size": "cover",
+	        "background-size": "cover"
+	    })
+	});
+	$('span.pp, span.np').remove();
+	if ( $('.main .temp > div').size() > 3 ) {
+		var steps = $('.main .temp > div').size()-3;
+		var current = 0;
+		$('.content').append('<span class="pp"></span><span class="np"></span>');
+		$('span.pp').css({
+			'left': $('.main .pagination').offset().left+p2/2+'px',
+			'top': $('.portfolio').offset().top-30+'px'
+		});
+		$('span.np').css({
+			'left': $('.main .pagination').offset().left+p2/2+'px',
+			'top': $('.portfolio').offset().top+$('.portfolio').height()+14+'px'
+		});
+		$('span.pp').bind('click', function() {
+			current--;
+			if ( current < 0 ) {
+				current = steps;
+			}
+			$('.portfolio .main .pagination').stop(true,true).animate({
+				'top': -current*($('.portfolio .main .pagination li').height()+20)+'px'
+			}, 250);
+			return false;
+		});
+		$('span.np').bind('click', function() {
+			current++;
+			if ( current > steps ) {
+				current = 0;
+			}
+			$('.portfolio .main .pagination').stop(true,true).animate({
+				'top': -current*($('.portfolio .main .pagination li').height()+20)+'px'
+			}, 250);
+			return false;
+		});
+	}
 }
 $(window).resize(function() {
 	if ( $('.introduction').length > 0 ) {

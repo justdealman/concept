@@ -1974,3 +1974,18 @@ button.ask {
 	margin:0 12px 10px;
 	background:url('../img/map_data_icon.png') no-repeat left top;
 }
+
+span.pp, span.np {
+	position:absolute;
+	display:block;
+	width:31px;
+	height:16px;
+	cursor:pointer;
+	margin-left:-16px;
+}
+span.pp {
+	background:url('../img/pnp.png') no-repeat left top;
+}
+span.np {
+	background:url('../img/pnp.png') no-repeat left -16px;
+}
