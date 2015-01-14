@@ -181,7 +181,7 @@ $(document).ready(function() {
 		$(this).parent().find('input[type="file"]').trigger('click');return false
 	});
 	if ( $('.index').length > 0 ) {
-		$(".index").addClass("static");$(window).bind("DOMMouseScroll mousewheel",function(e){var t=e.originalEvent.wheelDelta||e.originalEvent.detail*-1;if($(".index.static").length>0){if(t/120>0){$(".index").removeClass("static");$(".index").animate({top:"100%"},1e3,function(){$(".index").addClass("static")})}else{$(".index").removeClass("static");$(".index").animate({top:"0"},1e3,function(){$(".index").addClass("static")})}}})
+		$(".index").addClass("static");$(document).bind("DOMMouseScroll mousewheel",function(e){var t=e.originalEvent.wheelDelta||e.originalEvent.detail*-1;if($(".index.static").length>0){if(t/120>0){$(".index").removeClass("static");$(".index").animate({top:"100%"},1e3,function(){$(".index").addClass("static")})}else{$(".index").removeClass("static");$(".index").animate({top:"0"},1e3,function(){$(".index").addClass("static")})}}})
 	}
 	var currentnav=$(".header > div > ul li.active").index()+1;$(".header > div > ul li").hover(function(){$(".header > div > ul li").removeClass("active")},function(){$(".header > div > ul li:nth-child("+currentnav+")").addClass("active")})
 	if ( $('.team').length > 0 ) {
@@ -190,5 +190,17 @@ $(document).ready(function() {
 	if ( $('.portfolio').length > 0 ) {
 		portfolio();
 	}
-	$("input, textarea").each(function(){$(this).data("holder",$(this).attr("placeholder"));$(this).focusin(function(){$(this).attr("placeholder","")});$(this).focusout(function(){$(this).attr("placeholder",$(this).data("holder"))})})
+	$("input, textarea").each(function(){$(this).data("holder",$(this).attr("placeholder"));$(this).focusin(function(){$(this).attr("placeholder","")});$(this).focusout(function(){$(this).attr("placeholder",$(this).data("holder"))})});
+	$('.header > div > ul li:nth-child(1) a').css({
+		'background': 'url("./img/menu_link1.png") no-repeat left top'
+	});
+	$('.header > div > ul li:nth-child(2) a').css({
+		'background': 'url("./img/menu_link2.png") no-repeat left top'
+	});
+	$('.header > div > ul li:nth-child(3) a').css({
+		'background': 'url("./img/menu_link3.png") no-repeat left top'
+	});
+	$('.header > div > ul li:nth-child(4) a').css({
+		'background': 'url("./img/menu_link4.png") no-repeat left top'
+	});
 });
